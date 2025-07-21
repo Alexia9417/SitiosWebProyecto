@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Capuzzella - Iniciar Sesión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+
+<body class="font-sans text-primary-dark">
+    <header class="bg-[#212121] text-[#e0e0e0] py-4 px-6 flex justify-center items-center relative h-[100px]">
+        <nav class="w-full max-w-[1200px] flex justify-between items-center flex-wrap gap-4">
+            <div class="flex gap-6">
+                <a href="index.php" class="font-bold hover:text-[#d4af37]">Inicio</a>
+                <a href="#" class="font-bold hover:text-[#d4af37]">Menú</a>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+                <img src="public/media/logo.jpg" alt="La Capuzzella Logo"
+                    class="w-[100px] h-[100px] rounded-full object-cover border-[2px] border-[#d4af37] p-1 bg-[#212121]" />
+            </div>
+            <div class="flex gap-6">
+                <a href="views/nosostros.php" class="font-bold hover:text-[#d4af37]">Nosotros</a>
+                <a href="views/login.php" class="font-bold hover:text-[#d4af37]">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-b from-[#212121] to-[#5c4b7d] px-6 py-16 min-h-[700px] flex justify-center items-start">
+        <div class="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px]">
+            <div class="flex-1 max-w-xl">
+                <p class="text-sm tracking-widest uppercase mb-2 text-[#E9C89A]">Auténtica Cocina Italiana</p>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">Somos los <span class="text-[#E9C89A]">Mejores</span> Proveedores de <span class="text-[#E9C89A]">Sabor</span></h1>
+                <p class="text-lg text-[#E9C89A] mb-6">Descubre la auténtica cocina italiana en La Capuzzelle, donde cada plato cuenta una historia de tradición y pasión culinaria.</p>
+                <a href="#" class="inline-block bg-[#222] text-[#E9C89A] px-6 py-3 rounded hover:bg-black transition">Ver Menú</a>
+            </div>
+            <div class="w-[300px] h-[300px] rounded-full bg-black border-[5px] border-[#d4af37] shadow-2xl flex items-center justify-center mt-10 lg:mt-0 ml-0 lg:ml-12 overflow-hidden">
+                <img src="public/media/logo.jpg" alt="Logo grande" class="w-full h-full object-cover rounded-full" />
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Lo Que <span class="text-[#967ed5]">Ofrecemos</span> Para Ti</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                        <img src="public/media/nachos.png" alt="Antipasti icon" class="w-12 h-12" />
+                    </div>
+                    <h3 class="text-lg font-semibold">Antipasti</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                        <img src="public/media/risotto.png" alt="Pasta & Risotto icon" class="w-12 h-12" />
+                    </div>
+                    <h3 class="text-lg font-semibold">Pasta & Risotto</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                        <img src="public/media/meat.png" alt="Meat icon" class="w-12 h-12" />
+                    </div>
+                    <h3 class="text-lg font-semibold">Carnes</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                        <img src="public/media/fish.png" alt="Fish icon" class="w-12 h-12" />
+                    </div>
+                    <h3 class="text-lg font-semibold">Pescados</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#f8f8f8]">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <img src="public/media/chef.avif" alt="Italian chef cooking" class="rounded-lg shadow-md w-full" />
+            </div>
+            <div class="w-full md:w-1/2">
+                <p class="text-sm uppercase tracking-wider text-gray-400">Nuestra Filosofía</p>
+                <h2 class="text-3xl font-bold mb-6">Creemos en Trabajar Con <span class="text-[#967ed5]">Proveedores</span> Acreditados</h2>
+                <div class="space-y-6 mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="public/media/harvest.png" alt="Premium Ingredients" class="w-8 h-8" />
+                        <div>
+                            <p class="font-semibold">Ingredientes Premium</p>
+                            <span class="text-sm text-gray-600">Importados de Italia</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <img src="public/media/chef-p.png" alt="Expert Chefs" class="w-8 h-8" />
+                        <div>
+                            <p class="font-semibold">Chefs Expertos</p>
+                            <span class="text-sm text-gray-600">Tradición italiana</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-6">En La Capuzzella, trabajamos exclusivamente con proveedores certificados que comparten nuestra pasión por la calidad. Cada ingrediente es seleccionado cuidadosamente para garantizar la autenticidad de nuestros platos tradicionales italianos.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="px-6 py-3 bg-[#967ed5] text-white font-semibold rounded-full hover:bg-[#c19e2b] transition">25+ Años</a>
+                    <a href="#" class="px-6 py-3 border border-[#E9C89A] text-[#E9C89A] font-semibold rounded-full hover:bg-[#E9C89A] hover:text-white transition">Conocer Más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#f8f9fa] py-16 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="text-sm uppercase tracking-wider text-[#967ed5]">OFERTA ESPECIAL DEL MES</p>
+            <h2 class="text-3xl md:text-3xl font-bold mb-4">
+                Menú Degustación Original Para <span class="text-[#967ed5]">Ofertas Limitadas</span>
+            </h2>
+            <p class="text-gray-700 max-w-xl mx-auto">
+                Disfruta de nuestro menú degustación especial con 5 platos tradicionales italianos por tiempo limitado.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <img src="public/media/happy.jpg" alt="Happy customer eating pasta" class="rounded-lg shadow-md w-full" />
+            </div>
+            <div class="w-full md:w-1/2">
+                <p class="uppercase text-sm tracking-widest text-[#967ed5] mb-2">Testimonios</p>
+                <h2 class="text-3xl font-bold mb-6">Lo Que Dicen Nuestros <span class="text-[#967ed5]">Clientes</span></h2>
+                <div class="bg-[#f9f9f9] p-6 rounded-lg shadow space-y-4">
+                    <div class="text-[#d4af37] text-xl">★★★★★</div>
+                    <p class="text-gray-700">"La experiencia en La Capuzzella fue excepcional. La pasta carbonara estaba perfecta y el servicio fue impecable. Definitivamente volveremos para probar más platos de su menú."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="public/media/user.png" alt="David Johnson avatar" class="w-12 h-12 rounded-full" />
+                        <div>
+                            <p class="font-semibold">David Johnson</p>
+                            <span class="text-sm text-gray-500">Cliente Regular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="bg-[#000] text-white py-10 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="mb-4">
+                    <img src="public/media/logo.jpg" alt="La Capuzzelle Footer Logo" class="h-20 w-auto">
+                </div>
+                <p class="text-sm text-[#E9C89A]">Auténtica cocina italiana en el corazón de la ciudad. Tradición, calidad y sabor en cada plato.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Información</h4>
+                <ul class="space-y-2 text-[#E9C89A]">
+                    <li><a href="#" class="hover:underline">Sobre Nosotros</a></li>
+                    <li><a href="#" class="hover:underline">Nuestro Menú</a></li>
+                    <li><a href="#" class="hover:underline">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Mi Cuenta</h4>
+                <ul class="space-y-2 text-[#E9C89A]">
+                    <li><a href="#" class="hover:underline">Iniciar Sesión</a></li>
+                    <li><a href="#" class="hover:underline">Registrarse</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-start gap-2">
+                        <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M12 12.72a1 1 0 1 0 0-1.44 1 1 0 0 0 0 1.44Z" />
+                            <path d="M12 21.73c-3.59-3.92-6-7.12-6-10.73a6 6 0 0 1 12 0c0 3.61-2.41 6.81-6 10.73Z" />
+                            <path d="M12 22v-1" />
+                        </svg>
+                        <span class="text-[#E9C89A]">Calle Principal 123</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M12 12.72a1 1 0 1 0 0-1.44 1 1 0 0 0 0 1.44Z" />
+                            <path d="M12 21.73c-3.59-3.92-6-7.12-6-10.73a6 6 0 0 1 12 0c0 3.61-2.41 6.81-6 10.73Z" />
+                            <path d="M12 22v-1" />
+                        </svg>
+                        <span class="text-[#E9C89A]">Centro Histórico, Ciudad</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" />
+                        </svg>
+                        <span class="text-[#E9C89A]">+34 123 456 789</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.93 1.93 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        <span class="text-[#E9C89A]">info@lacapuzzella.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 mt-10 pt-6 text-center text-sm text-white">
+            <p class="mb-2">&copy; 2025 La Capuzzella. Todos los derechos reservados.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#" class="hover:text-yellow-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-yellow-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.5" y1="6.5" y2="6.5" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-yellow-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17-18 11.6 2.2.1 4.4-.6 6-2 1.1-1.1 1.6-2.5 1.6-4-.1 0-.3.1-.5.1-1.4.1-2.8-.6-3.8-1.6C6.5 8.5 5 7 5 5.5c0-.5.1-1 .3-1.5 1.3 1.4 2.8 2.1 4.6 2.2 0-1.2.6-2.3 1.6-3.1C12.5 2 14 2 15.5 2c.8 0 1.5.2 2.2.5.7-.2 1.4-.5 2-.9.2.8.4 1.5.4 2.3 0 .8-.2 1.5-.5 2.2z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
