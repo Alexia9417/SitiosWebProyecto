@@ -23,146 +23,148 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-
 <body class="font-sans text-primary-dark">
     <header class="bg-[#212121] text-[#e0e0e0] py-4 px-6 flex justify-center items-center relative h-[100px]">
         <nav class="w-full max-w-[1200px] flex justify-between items-center flex-wrap gap-4">
             <div class="flex gap-6">
-                <a href="index.php" class="font-bold hover:text-[#d4af37]">Inicio</a>
+                <a href="../index.php" class="font-bold hover:text-[#d4af37]">Inicio</a>
                 <a href="#" class="font-bold hover:text-[#d4af37]">Menú</a>
             </div>
             <div class="absolute left-1/2 transform -translate-x-1/2">
-                <img src="public/img/logo.jpg" alt="La Capuzzella Logo"
+                <img src="../public/img/logo.jpg" alt="La Capuzzella Logo"
                     class="w-[100px] h-[100px] rounded-full object-cover border-[2px] border-[#d4af37] p-1 bg-[#212121]" />
             </div>
             <div class="flex gap-6">
-                <a href="views/sitio/nosotros.php" class="font-bold hover:text-[#d4af37]">Nosotros</a>
-                <a href="views/sitio/login.php" class="font-bold hover:text-[#d4af37]">Login</a>
+                <a href="nosotros.php" class="font-bold hover:text-[#d4af37]">Nosotros</a>
+                <a href="login.php" class="font-bold hover:text-[#d4af37]">Login</a>
             </div>
         </nav>
     </header>
 
+
     <section class="bg-gradient-to-b from-[#212121] to-[#5c4b7d] px-6 py-16 min-h-[700px] flex justify-center items-start">
         <div class="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1200px]">
             <div class="flex-1 max-w-xl">
-                <p class="text-sm tracking-widest uppercase mb-2 text-[#E9C89A]">Auténtica Cocina Italiana</p>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">Somos los <span class="text-[#E9C89A]">Mejores</span> Proveedores de <span class="text-[#E9C89A]">Sabor</span></h1>
-                <p class="text-lg text-[#E9C89A] mb-6">Descubre la auténtica cocina italiana en La Capuzzelle, donde cada plato cuenta una historia de tradición y pasión culinaria.</p>
-                <a href="#" class="inline-block bg-[#222] text-[#E9C89A] px-6 py-3 rounded hover:bg-black transition">Ver Menú</a>
+                <p class="text-sm tracking-widest uppercase mb-2 text-gray-400">INICIO &gt; <span class="text-[#E9C89A]">Sobre Nosotros</span></p>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white py-5"><span class="text-[#E9C89A]">Sobre Nosotros</span></h1>
             </div>
-            <div class="w-[300px] h-[300px] rounded-full bg-black border-[5px] border-[#d4af37] shadow-2xl flex items-center justify-center mt-10 lg:mt-0 ml-0 lg:ml-12 overflow-hidden">
-                <img src="public/img/logo.jpg" alt="Logo grande" class="w-full h-full object-cover rounded-full" />
+            <div class="w-full max-w-xl aspect-[4/3]  flex items-center justify-center rounded-lg shadow-lg overflow-hidden">
+                <img src="../public/img/restaurant.jpg" alt="Placeholder image" class=" object-contain">
             </div>
         </div>
     </section>
 
-
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Lo Que <span class="text-[#967ed5]">Ofrecemos</span> Para Ti</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <img src="public/img/nachos.png" alt="Antipasti icon" class="w-12 h-12" />
-                    </div>
-                    <h3 class="text-lg font-semibold">Antipasti</h3>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <img src="public/img/risotto.png" alt="Pasta & Risotto icon" class="w-12 h-12" />
-                    </div>
-                    <h3 class="text-lg font-semibold">Pasta & Risotto</h3>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <img src="public/img/meat.png" alt="Meat icon" class="w-12 h-12" />
-                    </div>
-                    <h3 class="text-lg font-semibold">Carnes</h3>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <img src="public/img/fish.png" alt="Fish icon" class="w-12 h-12" />
-                    </div>
-                    <h3 class="text-lg font-semibold">Pescados</h3>
+    <section class="bg-background-light py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 flex justify-center md:justify-start order-2 md:order-1">
+                <div class="w-full max-w-md aspect-[4/3] flex items-center justify-center rounded-lg shadow-lg overflow-hidden">
+                    <img src="../public/img/experience.jpg" alt="Placeholder image" class="w-full h-full object-cover rounded-lg">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-[#f8f8f8]">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2">
-                <img src="public/img/chef.avif" alt="Italian chef cooking" class="rounded-lg shadow-md w-full" />
-            </div>
-            <div class="w-full md:w-1/2">
-                <p class="text-sm uppercase tracking-wider text-gray-400">Nuestra Filosofía</p>
-                <h2 class="text-3xl font-bold mb-6">Creemos en Trabajar Con <span class="text-[#967ed5]">Proveedores</span> Acreditados</h2>
-                <div class="space-y-6 mb-6">
-                    <div class="flex items-center gap-4">
-                        <img src="public/img/harvest.png" alt="Premium Ingredients" class="w-8 h-8" />
-                        <div>
-                            <p class="font-semibold">Ingredientes Premium</p>
-                            <span class="text-sm text-gray-600">Importados de Italia</span>
+            <div class="flex-1 order-1 md:order-2 text-center md:text-left">
+                <h3 class="text-sm uppercase tracking-wide text-accent-purple font-semibold mb-2 text-[#967ed5]">SOBRE NOSOTROS</h3>
+                <h2 class="text-3xl md:text-3xl font-bold leading-tight mb-6">Tenemos 25 Años de Experiencia Práctica</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Desde nuestra fundación, hemos perfeccionado el arte de la cocina italiana auténtica, combinando técnicas
+                    tradicionales con ingredientes de la más alta calidad importados directamente de Italia.
+                </p>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-start md:items-center gap-3">
+                        <span class="checkbox-custom"></span>
+                        <span>Recetas familiares transmitidas por generaciones</span>
+                    </li>
+                    <li class="flex items-start md:items-center gap-3">
+                        <span class="checkbox-custom"></span>
+                        <span>Ingredientes importados directamente de Italia</span>
+                    </li>
+                    <li class="flex items-start md:items-center gap-3">
+                        <span class="checkbox-custom"></span>
+                        <span>Técnicas culinarias tradicionales auténticas</span>
+                    </li>
+                </ul>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center text-sm font-semibold mb-1">
+                            <span>Cocina Italiana</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 95%;"></div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <img src="public/img/chef-p.png" alt="Expert Chefs" class="w-8 h-8" />
-                        <div>
-                            <p class="font-semibold">Chefs Expertos</p>
-                            <span class="text-sm text-gray-600">Tradición italiana</span>
+                    <div>
+                        <div class="flex justify-between items-center text-sm font-semibold mb-1">
+                            <span>Ingredientes Orgánicos</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 88%;"></div>
                         </div>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-6">En La Capuzzella, trabajamos exclusivamente con proveedores certificados que comparten nuestra pasión por la calidad. Cada ingrediente es seleccionado cuidadosamente para garantizar la autenticidad de nuestros platos tradicionales italianos.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="px-6 py-3 bg-[#967ed5] text-white font-semibold rounded-full hover:bg-[#c19e2b] transition">25+ Años</a>
-                    <a href="#" class="px-6 py-3 border border-[#E9C89A] text-[#E9C89A] font-semibold rounded-full hover:bg-[#E9C89A] hover:text-white transition">Conocer Más</a>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-[#f8f9fa] py-16 px-4">
-        <div class="max-w-5xl mx-auto text-center">
-            <p class="text-sm uppercase tracking-wider text-[#967ed5]">OFERTA ESPECIAL DEL MES</p>
-            <h2 class="text-3xl md:text-3xl font-bold mb-4">
-                Menú Degustación Original Para <span class="text-[#967ed5]">Ofertas Limitadas</span>
-            </h2>
-            <p class="text-gray-700 max-w-xl mx-auto">
-                Disfruta de nuestro menú degustación especial con 5 platos tradicionales italianos por tiempo limitado.
+    <section class="bg-[#E9C89A]/30 py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 flex justify-center md:justify-start">
+                <div class="w-full max-w-sm aspect-[4/3] flex items-center justify-center rounded-lg overflow-hidden">
+                    <img src="../public/img/logo.jpg" alt="La Capuzzella Logo"
+                        class="w-[280px] h-[280px] rounded-full object-cover border-[2px] border-[#d4af37] p-1 bg-[#212121]" />
+                </div>
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <h3 class="text-sm uppercase tracking-wide text-accent-purple font-semibold mb-2 text-[#967ed5]">¿POR QUÉ ELEGIRNOS?</h3>
+                <h2 class="text-3xl md:text-3xl font-bold leading-tight mb-6">Algunas Razones Para <span class="text-accent-purple">Elegirnos</span></h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Hay muchas variaciones de restaurantes disponibles, pero la mayoría han sufrido alteraciones de alguna
+                    forma, por humor inyectado o palabras aleatorias que no se ven ni siquiera ligeramente creíbles.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start md:items-center gap-3">
+                        <span class="checkbox-custom"></span>
+                        <div>
+                            <span class="font-bold text-[#4E5D83]">Personal Profesional</span>
+                            <p>Nuestro equipo está compuesto por chefs experimentados y personal de servicio altamente capacitado con años de experiencia en cocina italiana auténtica.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start md:items-center gap-3">
+                        <span class="checkbox-custom"></span>
+                        <div>
+                            <span class="font-bold text-[#4E5D83]">Ingredientes Orgánicos de Calidad</span>
+                            <p>Utilizamos únicamente ingredientes orgánicos de la más alta calidad, importados directamente de las mejores regiones de Italia para garantizar autenticidad.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#4e5d83] text-primary-light py-16 px-6 md:px-12 relative overflow-hidden">
+        <div class="quote-icon text-[rgba(255,255,255,0.1)] md:text-[rgba(255,255,255,0.05)] select-none" style="font-family: serif; font-weight: 900;">&#8220;</div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <p class="text-2xl md:text-2xl italic leading-relaxed mb-8 text-white">
+                &ldquo;La experiencia en La Capuzzella fue absolutamente excepcional. Cada plato fue
+                una obra maestra de sabores auténticos italianos. El servicio impecable y el
+                ambiente acogedor hacen de este lugar una joya culinaria que recomiendo sin
+                reservas.&rdquo;
             </p>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2">
-                <img src="public/img/happy.jpg" alt="Happy customer eating pasta" class="rounded-lg shadow-md w-full" />
-            </div>
-            <div class="w-full md:w-1/2">
-                <p class="uppercase text-sm tracking-widest text-[#967ed5] mb-2">Testimonios</p>
-                <h2 class="text-3xl font-bold mb-6">Lo Que Dicen Nuestros <span class="text-[#967ed5]">Clientes</span></h2>
-                <div class="bg-[#f9f9f9] p-6 rounded-lg shadow space-y-4">
-                    <div class="text-[#d4af37] text-xl">★★★★★</div>
-                    <p class="text-gray-700">"La experiencia en La Capuzzella fue excepcional. La pasta carbonara estaba perfecta y el servicio fue impecable. Definitivamente volveremos para probar más platos de su menú."</p>
-                    <div class="flex items-center gap-4">
-                        <img src="public/img/user.png" alt="David Johnson avatar" class="w-12 h-12 rounded-full" />
-                        <div>
-                            <p class="font-semibold">David Johnson</p>
-                            <span class="text-sm text-gray-500">Cliente Regular</span>
-                        </div>
-                    </div>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden mb-3">
+                    <img src="../public/img/user.png" alt="Marco Rossi Avatar" class="w-full h-full object-cover">
                 </div>
+                <p class="font-bold text-lg text-white">Marco Rossi</p>
+                <p class="text-sm opacity-90 text-[#E9C89A]">Cliente Regular</p>
             </div>
         </div>
     </section>
-    </main>
 
     <footer class="bg-[#000] text-white py-10 px-4">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
                 <div class="mb-4">
-                    <img src="public/img/logo.jpg" alt="La Capuzzelle Footer Logo" class="h-20 w-auto">
+                    <img src="../public/img/logo.jpg" alt="La Capuzzelle Footer Logo" class="h-20 w-auto">
                 </div>
                 <p class="text-sm text-[#E9C89A]">Auténtica cocina italiana en el corazón de la ciudad. Tradición, calidad y sabor en cada plato.</p>
             </div>
@@ -239,6 +241,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 
 </html>
