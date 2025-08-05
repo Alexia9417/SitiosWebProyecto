@@ -17,7 +17,7 @@
         <nav class="w-full max-w-[1200px] flex justify-between items-center flex-wrap gap-4">
             <div class="flex gap-6">
                 <a href="../../index.html" class="font-bold hover:text-[#d4af37]">Inicio</a>
-                <a href="#" class="font-bold hover:text-[#d4af37]">Menú</a>
+                <a href="Menu/Menu.html" class="font-bold hover:text-[#d4af37]">Menú</a>
             </div>
             <div class="absolute left-1/2 transform -translate-x-1/2">
                 <img src="../../public/img/logo.jpg" alt="La Capuzzella Logo"
@@ -51,7 +51,7 @@
                 <div class="bg-white rounded-lg p-10 shadow-2xl w-full max-w-[500px]">
                     <h2 class="text-2xl font-bold text-center text-[#333] mb-2">Crear Cuenta</h2>
                     <p class="text-sm text-center text-gray-600 mb-8">Únete a nuestra familia culinaria italiana</p>
-                    <form>
+                    <form method="POST" action="../../Registrar.php"  class="space-y-5">
                         <h3 class="text-base font-bold mb-6 text-[#333]">Información Personal</h3>
 
                         <div class="flex flex-col md:flex-row gap-6 mb-6">
@@ -59,7 +59,7 @@
                                 <label for="nombre" class="block text-sm font-bold mb-2 text-[#333]">Nombre *</label>
                                 <div class="relative">
                                     <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
-                                    <input type="text" id="nombre" placeholder="Tu nombre" required
+                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required 
                                         class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                                 <label for="apellido" class="block text-sm font-bold mb-2 text-[#333]">Apellido *</label>
                                 <div class="relative">
                                     <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
-                                    <input type="text" id="apellido" placeholder="Tu apellido" required
+                                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required
                                         class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                             <label for="email" class="block text-sm font-bold mb-2 text-[#333]">Email *</label>
                             <div class="relative">
                                 <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
-                                <input type="email" id="email" placeholder="tu@email.com" required
+                                <input type="email" name="email" id="email" placeholder="tu@email.com" required
                                     class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                             <label for="password" class="block text-sm font-bold mb-2 text-[#333]">Contraseña *</label>
                             <div class="relative">
                                 <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
-                                <input type="password" id="password" placeholder="Mínimo 8 caracteres" required
+                                <input type="password" name="password" id="password" placeholder="Mínimo 8 caracteres" required
                                     class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
                             </div>
                             <p class="text-xs text-gray-500 mt-2">La contraseña debe tener al menos 8 caracteres, incluir mayúsculas,
@@ -97,7 +97,7 @@
                             <label for="confirm-password" class="block text-sm font-bold mb-2 text-[#333]">Confirmar Contraseña *</label>
                             <div class="relative">
                                 <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
-                                <input type="password" id="confirm-password" placeholder="Confirma tu contraseña" required
+                                <input type="password" id="confirm-password" name="confirm_password"  placeholder="Confirma tu contraseña" required
                                     class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                             class="w-full bg-[#967ed5] text-white py-2 rounded-md hover:bg-opacity-90 transition-colors font-semibold">Crear
                             Mi Cuenta</button>
 
-                        <p class="text-center text-sm text-gray-600 mt-6">¿Ya tienes una cuenta? <a href="#"
+                        <p class="text-center text-sm text-gray-600 mt-6">¿Ya tienes una cuenta? <a href="login.html"
                                 class="text-[#E9C89A] hover:underline">Inicia sesión aquí</a></p>
                     </form>
                 </div>
@@ -173,15 +173,7 @@
     </section>
 
     <footer class="bg-[#4E5D83] text-[#e0e0e0] py-16 px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6 leading-snug">¿Listo para Vivir la Experiencia <span class="text-[#E9C89A]">La Capuzzella</span>?</h2>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-            <button class="bg-[#967ed5] hover:bg-[#6a5acd] text-white px-6 py-3 rounded-md font-bold text-lg transition-colors">
-                Crear Cuenta
-            </button>
-            <button class="border-2 border-[#e0e0e0] text-[#e0e0e0] px-6 py-3 rounded-md font-bold text-lg hover:bg-[#e0e0e0] hover:text-[#212121] transition-colors">
-                Ver Menú
-            </button>
-        </div>
+        <h2 class="text-3xl font-bold mb-6 leading-snug">¡Se parte de nuestra familia!<br><span class="text-[#E9C89A]">La Capuzzella</span></h2>
     </footer>
 
 </body>
