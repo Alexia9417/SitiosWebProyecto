@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Orden</title>
+  <!--<link rel="icon" href="img/icono.png" type="image/png" />-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="Css/estilos.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Mesa#</h1>
+    <span id="hora">Hora:</span>
+  </header>
+
+  <nav class="nav-secundario" id="nav-mesas">
+    <!-- Botones se llenarán dinámicamente -->
+  </nav>
+
+  <h2 id="MesasOcupadas">Menú del Restaurante</h2>
+
+  <div class="contenedor-principal">
+    <div class="columna-izquierda">
+      <div class="cuadro-izquierda">
+        <h3>Mi Orden</h3>
+        <p>Aquí va el contenido de tu orden...</p>
+      </div> <!--Fin columna Izquierda-->
+      <div id="resumen-pedido" style="display:none;">
+        <h3>Resumen del Pedido</h3>
+        <ul id="lista-resumen"></ul>
+        <p><strong>Total: ₡<span id="total-pedido">0.00</span></strong></p>
+        <button id="btn-confirmar">Confirmar Pedido</button>
+      </div>
+
+    </div>
+
+    <div class="columna-derecha">
+      <div class="cuadro-derecha">
+        <h3>Estado del Local</h3>
+        <p><i class="fa-solid fa-temperature-three-quarters"></i> Temperatura</p>
+        <p><i class="fa-solid fa-user-gear"></i> Ocupación</p>
+        <p><i class="fa-solid fa-clock"></i> Servicio</p>
+        <p><i class="fa-solid fa-volume-high"></i> Ruido</p>
+      </div>
+
+      <div class="cuadro-derecha">
+        <h3>Mesa #</h3>
+        <p><strong>Capacidad:</strong> dd</p>
+        <p><strong>Ubicación:</strong> dd</p>
+        <p><strong>Mesero:</strong> dd</p>
+        <p><strong>Tiempo:</strong> dd</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="JS/ScriptNumHoraNav.js"></script>
+  <script src="JS/menu.js"></script>
+</body>
+
+</html>
