@@ -4,13 +4,13 @@ session_start();
 
 // Verifica si la sesión está iniciada
 if (!isset($_SESSION['IdUsuario'])) {
-    header("Location: ../Pages/sitio/login.html");
+    header("Location: ../sitio/login.html");
     exit();
 }
 
 // Verifica si el rol es correcto
 if ($_SESSION['IdTipoUsuario'] != 2) {
-    header("Location: ../Pages/sitio/login.html");
+    header("Location: ../sitio/login.html");
     exit();
 }
 
@@ -652,5 +652,6 @@ $conn->close();
     </script>
 
 </body>
+
 
 </html>
