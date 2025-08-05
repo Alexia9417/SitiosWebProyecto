@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Mesero - Cocina</title>
+  <link rel="stylesheet" href="Css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<style>
+  /*Boton para cerrar sesion*/
+  .cerrar-sesion {
+    background-color: #4E5D83;
+    border: none;
+    /* si quieres sin borde */
+    /* o si quieres borde: border: 1px solid black; */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    /* inline para que no tome toda la línea */
+    align-items: center;
+    justify-content: center;
+    /* centra horizontalmente */
+    gap: 8px;
+    padding: 0 15px;
+    /* espacio interno horizontal para que no pegue el texto a los bordes */
+    height: 30px;
+    width: 120px;
+    text-decoration: none;
+    /* quita la línea del enlace */
+  }
+
+  /* Notificacion */
+  .cuadro-notificaciones {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 350px;
+    max-height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+  }
+
+  .encabezado-notificaciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+  }
+
+  .encabezado-notificaciones button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  .lista-notificaciones {
+    padding: 10px;
+  }
+
+  .notificacion {
+    padding: 8px;
+    font-size: 0.85rem;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    color: #333;
+  }
+
+  .notificacion.alta {
+    border-left: 4px solid red;
+    background-color: #ffe6e6;
+  }
+
+  .notificacion.media {
+    border-left: 4px solid orange;
+    background-color: #fff3e0;
+  }
+
+  .notificacion.baja {
+    border-left: 4px solid green;
+    background-color: #e8f5e9;
+  }
+
+  hr {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+
+  .notificacion.no-leida {
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  .notificacion.leida {
+    font-weight: normal;
+    opacity: 1;
+  }
+
+
+  .texto-notificacion {
+    margin-left: 5px;
+    display: none;
+    /* oculto por defecto */
+  }
+
+  /*-----------------------------------------------------------------------------------*/
+  .contenedor-principal {
+    height: 500px;
+  }
+
+  /* CONTENEDOR DE LA LISTA DE ÓRDENES */
+  .Lista-Ordenes {
+    width: 100%;
+    margin-top: 20px;
+    color: #000;
+    /* texto visible por defecto */
+  }
+
+  /* TÍTULO */
+  .Lista-Ordenes h2 {
+    color: #4e37a0;
+    margin-bottom: 15px;
+  }
+
+  /* CADA ORDEN */
+  .orden {
+    background-color: #f9f7ff;
+    border: 1.5px solid #d5ccff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    color: #000;
+    /* fuerza color negro para todo dentro */
+  }
+
+  /* ENCABEZADO DE LA ORDEN */
+  .orden-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    /* espacio entre "Orden Mesa #" y el estado */
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  /* DETALLE DE ORDEN: PRODUCTOS Y BOTÓN */
+  .orden-detalle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #000;
+  }
+
+  /* PRODUCTOS */
+  .orden-detalle span {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  /* ESTADO (Etiqueta de color) */
+  .estado {
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .estado.urgente {
+    background-color: #e74c3c;
+  }
+
+  .estado.normal {
+    background-color: #E9C89A;
+  }
+
+  /* BOTÓN */
+  .boton-preguntar {
+    background-color: #7543f5;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .boton-preguntar:hover {
+    background-color: #5e2fcf;
+  }
+</style>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <button class="notificaciones">
+      <i class="fa-solid fa-bell"></i>
+      Notificaciones Pendientes
+    </button>
+    <div class="usuario">
+      <i class="fa-solid fa-circle-user"></i>
+      <strong>Mesero: David</strong>
+    </div>
+
+    <!-- Botón para cerrar sesión -->
+    <a href="../logout.php" class="cerrar-sesion">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      Cerrar Sesión
+    </a>
+  </header>
+
+
+  <!-- PANEL SUPERIOR -->
+  <section class="paneles-superiores">
+    <div class="panel">
+      <strong>Estrés</strong>
+      <div class="barra">
+        <div style="width: 18%"></div>
+      </div> <span>18%</span>
+    </div>
+    <div class="panel">
+      <strong>Energía </strong>
+      <div class="barra">
+        <div style="width: 33%"></div>
+      </div>
+      <span>33%</span>
+    </div>
+    <div class="panel">
+      <strong>Eficiencia</strong>
+      <div class="barra">
+        <div style="width: 70%"></div>
+      </div> <span>70%</span>
+    </div>
+    <div class="panel">
+      <strong>Propinas</strong>
+      <div class="barra" style="background: none;"></div>
+      <span><strong>$34.34</strong></span>
+    </div>
+  </section>
+
+  <!-- NAV SECUNDARIO -->
+  <nav class="nav-secundario">
+    <a href="Mesas.html"><i class="fas fa-chair" style="color: #6b30ff;"></i> Mis mesas</a>
+    <a href="Tareas.html"><i class="fas fa-tasks" style="color: #6b30ff;"></i> Tareas</a>
+    <a href="Cocina.html"><i class="fas fa-utensils" style="color: #6b30ff;"></i> Cocina</a>
+    <a href="Comunicacion.html"><i class="fas fa-comments" style="color: #6b30ff;"></i> Comunicación</a>
+    <a href="Persona.html"><i class="fas fa-user" style="color: #6b30ff;"></i> Persona</a>
+  </nav>
+
+
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenido">
+    <div class="contenedor-principal">
+      <div class="Lista-Ordenes">
+        <H2 style="color: white; text-align: left;">Estado de Ordenes en Cocina</H2>
+        <div class="orden">
+          <div class="orden-cabecera">
+            <span><strong>Orden Mesa #4</strong></span>
+            <span class="estado urgente">Urgente</span>
+          </div>
+          <div class="orden-detalle">
+            <span>Ensalada, Pizza, Refresco</span>
+            <button class="boton-preguntar">Pedir que se apuren</button>
+          </div>
+        </div>
+
+        <div class="orden">
+          <div class="orden-cabecera">
+            <span><strong>Orden Mesa #2</strong></span>
+            <span class="estado normal">En preparación</span>
+          </div>
+          <div class="orden-detalle">
+            <span>Hamburguesa, Papas, Jugo</span>
+            <button class="boton-preguntar">Preguntar cuánto falta</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Resumen -->
+    <aside class="resumen">
+      <h3>Resumen del Turno</h3>
+      <div class="dato-resumen">
+        <span>Propinas</span>
+        <strong style="color: #7543f5;">$ 34.34</strong>
+      </div>
+      <div class="dato-resumen">
+        <span>Tareas Completadas</span>
+        <strong style="color: #7543f5;">11</strong>
+      </div>
+      <div class="dato-resumen">
+        <span>Horas Trabajadas</span>
+        <strong style="color: #7543f5;">14.3</strong>
+      </div>
+      <div class="dato-resumen">
+        <span>Nivel Estrés</span>
+        <strong style="color: #7543f5;">18%</strong>
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
