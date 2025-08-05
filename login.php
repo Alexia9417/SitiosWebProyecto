@@ -61,13 +61,16 @@ if ($result->num_rows === 1) {
                 header("Location: Pages/Cliente/SelecMesa.html");
                 break;
             case 4: // Cocina
-                header("Location: Pages/Cocina/index.html");
+                header("Location: Pages/Cocina/index.php");
                 break;
             case 5: // DefConf
-                header("Location: Pages/DefConf/index.html");
+                header("Location: Pages/DefConf/DEFCON.html");
                 break;
             case 6: // Caos
-                header("Location: Pages/Caos/index.html");
+                header("Location: Pages/Caos/GeneradorDeCaos.html");
+                break;
+            case 7: // VistaGeneral
+                header("Location: Pages/VistaGeneral/VistaGeneral.html");
                 break;
             default:
                 header("Location: Pages/sitio/login.html");
