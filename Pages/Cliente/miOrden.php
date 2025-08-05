@@ -4,13 +4,13 @@ include '../../conexion.php';
 
 // Verifica si la sesión está iniciada
 if (!isset($_SESSION['IdUsuario'])) {
-  header("Location: ../Pages/sitio/login.html");
+  header("Location: ../sitio/login.html");
   exit();
 }
 
 // Verifica si el rol es correcto
 if ($_SESSION['IdTipoUsuario'] != 3) {
-  header("Location: ../Pages/sitio/login.html");
+  header("Location: ../sitio/login.html");
   exit();
 }
 // Obtener ID de usuario
@@ -669,5 +669,6 @@ if ($resMesaInfo->num_rows > 0) {
       <script src="JS/menu.js"></script>
     <?php endif; ?>
 </body>
+
 
 </html>
