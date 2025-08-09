@@ -2,6 +2,7 @@
 session_start();
 include 'conexion.php';
 
+// Verificar si se envió el formulario
 $usuario = $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
 
@@ -78,12 +79,14 @@ if ($result->num_rows === 1) {
         }
         exit();
     } else {
-        header("Location: Pages/sitio/login.html");
+        $errorMsg = urlencode("Usuario o contraseña incorrectos.");
+        header("Location: Pages/sitio/login.php?error=" . urlencode("Usuario y/o contraseña incorrectos."));
         echo "Usuario o contraseña incorrectos.";
         exit;
     }
 } else {
-    header("Location: Pages/sitio/login.html");
+    $errorMsg = urlencode("Usuario o contraseña incorrectos.");
+    header("Location: Pages/sitio/login.php?error=" . urlencode("Usuario y/o contraseña incorrectos."));
     echo "Usuario o contraseña incorrectos.";
     exit;
 }
