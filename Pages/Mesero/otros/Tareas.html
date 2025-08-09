@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Mesero - Tareas</title>
+  <link rel="stylesheet" href="Css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<style>
+  /*Boton para cerrar sesion*/
+  .cerrar-sesion {
+    background-color: #4E5D83;
+    border: none;
+    /* si quieres sin borde */
+    /* o si quieres borde: border: 1px solid black; */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    /* inline para que no tome toda la línea */
+    align-items: center;
+    justify-content: center;
+    /* centra horizontalmente */
+    gap: 8px;
+    padding: 0 15px;
+    /* espacio interno horizontal para que no pegue el texto a los bordes */
+    height: 30px;
+    width: 120px;
+    text-decoration: none;
+    /* quita la línea del enlace */
+  }
+
+  /* CONTENEDOR DE TAREAS */
+  .Lista-Tareas {
+    width: auto;
+    margin-top: 20px;
+    color: #000;
+  }
+
+  .Lista-Tareas h2 {
+    color: #4e37a0;
+    margin-bottom: 15px;
+  }
+
+  /* CADA TAREA */
+  .tarea {
+    background-color: #f9f7ff;
+    border: 1.5px solid #d5ccff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    width: 1000px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  /* CABECERA DE TAREA (Título + tiempo) */
+  .tarea-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #000;
+  }
+
+  .tarea-cabecera .tiempo {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  /* DETALLES (Prioridad + botón) */
+  .tarea-detalle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #000;
+  }
+
+  /* Prioridades */
+  .prioridad {
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .prioridad.alta {
+    background-color: #e74c3c;
+  }
+
+  .prioridad.media {
+    background-color: #dfa95f;
+  }
+
+  .prioridad.baja {
+    background-color: #2ecc71;
+  }
+
+  /* Botón completar */
+  .boton-completar {
+    background-color: #7543f5;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .boton-completar:hover {
+    background-color: #5e2fcf;
+  }
+</style>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <button class="notificaciones">
+      <i class="fa-solid fa-bell"></i>
+      Notificaciones Pendientes
+    </button>
+    <div class="usuario">
+      <i class="fa-solid fa-circle-user"></i>
+      <strong>Mesero: David</strong>
+    </div>
+    <!-- Botón para cerrar sesión -->
+    <a href="../logout.php" class="cerrar-sesion">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      Cerrar Sesión
+    </a>
+  </header>
+
+
+  <!-- PANEL SUPERIOR -->
+  <section class="paneles-superiores">
+    <div class="panel">
+      <strong>Estrés</strong>
+      <div class="barra">
+        <div style="width: 18%"></div>
+      </div> <span>18%</span>
+    </div>
+    <div class="panel">
+      <strong>Energía </strong>
+      <div class="barra">
+        <div style="width: 33%"></div>
+      </div>
+      <span>33%</span>
+    </div>
+    <div class="panel">
+      <strong>Eficiencia</strong>
+      <div class="barra">
+        <div style="width: 70%"></div>
+      </div> <span>70%</span>
+    </div>
+    <div class="panel">
+      <strong>Propinas</strong>
+      <div class="barra" style="background: none;"></div>
+      <span><strong>$34.34</strong></span>
+    </div>
+  </section>
+
+  <!-- NAV SECUNDARIO -->
+  <nav class="nav-secundario">
+    <a href="Mesas.php"><i class="fas fa-chair" style="color: #6b30ff;"></i> Mis mesas</a>
+    <a href="Tareas.html"><i class="fas fa-tasks" style="color: #6b30ff;"></i> Tareas</a>
+    <a href="Cocina.php"><i class="fas fa-utensils" style="color: #6b30ff;"></i> Cocina</a>
+    <a href="Comunicacion.php"><i class="fas fa-comments" style="color: #6b30ff;"></i> Comunicación</a>
+    <a href="Persona.php"><i class="fas fa-user" style="color: #6b30ff;"></i> Persona</a>
+  </nav>
+
+
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenido">
+    <!-- Espacio para mesas (luego) -->
+    <div class="contenedor-principal">
+      <H2>Tareas pendientes</H2>
+      <div class="tareas">
+        <div class="Lista-Tareas">
+          <div class="tarea">
+            <div class="tarea-cabecera">
+              <span><strong>Enviar Orden Mesa #4 a Cocina</strong></span>
+              <span class="tiempo">Hace 3 min</span>
+            </div>
+            <div class="tarea-detalle">
+              <span>Prioridad: <strong class="prioridad alta">Alta</strong></span>
+              <button class="boton-completar">Completar</button>
+            </div>
+          </div>
+
+          <div class="tarea">
+            <div class="tarea-cabecera">
+              <span><strong>Llevar bebida a Mesa #2</strong></span>
+              <span class="tiempo">Hace 10 min</span>
+            </div>
+            <div class="tarea-detalle">
+              <span>Prioridad: <strong class="prioridad media">Media</strong></span>
+              <button class="boton-completar">Completar</button>
+            </div>
+          </div>
+
+          <div class="tarea">
+            <div class="tarea-cabecera">
+              <span><strong>Recoger cuenta Mesa #5</strong></span>
+              <span class="tiempo">Hace 25 min</span>
+            </div>
+            <div class="tarea-detalle">
+              <span>Prioridad: <strong class="prioridad baja">Baja</strong></span>
+              <button class="boton-completar">Completar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resumen -->
+    <aside class="resumen">
+      <h3>Resumen del Turno</h3>
+      <div class="dato-resumen">
+        <span>Propinas</span>
+        <strong style="color: #7543f5;">$ 34.34</strong>
+      </div>
+      <div class="dato-resumen">
+        <span>Tareas Completadas</span>
+        <strong style="color: #7543f5;">11</strong>
+      </div>
+      <div class="dato-resumen">
+        <span>Horas Trabajadas</span>
+        <strong style="color: #7543f5;">14.3</strong>
+      </div>
+      <div class="dato-resumen">
+        <span>Nivel Estrés</span>
+        <strong style="color: #7543f5;">18%</strong>
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

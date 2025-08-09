@@ -1,0 +1,44 @@
+/* Custom styles or overrides if needed */
+/* You can add any specific styles here that are not easily achievable with Tailwind or to override default Tailwind styles. */
+/* For this design, Tailwind handles most of the styling effectively. */
+
+/* Example of a custom style if you wanted to define a specific color palette not directly in Tailwind config */
+/* :root {
+    --color-primary-blue: #2563eb;
+    --color-sidebar-bg: #ffffff;
+    --color-dashboard-bg: #f3f4f6;
+    --color-text-dark: #1f2937;
+    --color-text-light: #6b7280;
+}
+
+.bg-primary-blue {
+    background-color: var(--color-primary-blue);
+} */
+
+/* Ensure icons are properly sized if not handled by Tailwind classes */
+.lucide {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* ../Public/CSS/inicio.css */
+
+.sidebar-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    background-color: #f9fafb;
+    font-size: 0.9rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.status-indicator.operative {
+    display: inline-block;
+    background-color: #34d399;
+    padding: 4px 8px;
+    border-radius: 9999px;
+    color: white;
+    font-weight: 600;
+}
