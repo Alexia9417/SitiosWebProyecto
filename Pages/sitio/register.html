@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Únete a La Capuzzella</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-[#f8f5f0] text-[#333]">
+
+    <header class="bg-[#212121] text-[#e0e0e0] py-4 px-6 flex justify-center items-center relative h-[100px]">
+        <nav class="w-full max-w-[1200px] flex justify-between items-center flex-wrap gap-4">
+            <div class="flex gap-6">
+                <a href="../../index.php" class="font-bold hover:text-[#d4af37]">Inicio</a>
+                <a href="Menu/Menu.html" class="font-bold hover:text-[#d4af37]">Menú</a>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+                <img src="../../public/img/logo.jpg" alt="La Capuzzella Logo"
+                    class="w-[100px] h-[100px] rounded-full object-cover border-[2px] border-[#d4af37] p-1 bg-[#212121]" />
+            </div>
+            <div class="flex gap-6">
+                <a href="nosotros.html" class="font-bold hover:text-[#d4af37]">Nosotros</a>
+                <a href="login.html" class="font-bold hover:text-[#d4af37]">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-gradient-to-b from-[#212121] to-[#5c4b7d] px-6 py-16 min-h-[700px] flex justify-center items-start">
+        <div class="flex flex-col lg:flex-row gap-16 max-w-[1200px] w-full items-start">
+            <div class="flex-1 text-[#e0e0e0] pr-0 lg:pr-8 text-center lg:text-left">
+                <p class="text-sm mb-4 text-gray-400">INICIO &gt;<span class="text-[#E9C89A]"> REGISTRARSE</span></p>
+                <h1 class="text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                    Únete a <span class="text-[#E9C89A]">La Capuzzella</span>
+                </h1>
+                <p class="text-lg leading-relaxed mb-8 max-w-md mx-auto lg:mx-0">
+                    Crea tu cuenta y forma parte de nuestra familia de amantes de la auténtica cocina italiana. Disfruta
+                    de
+                    beneficios exclusivos desde el primer día.
+                </p>
+                <div
+                    class="bg-white/10 border border-white/20 rounded-lg p-8 shadow-lg max-w-[400px] mx-auto lg:mx-0 min-h-[250px] flex justify-center items-center">
+                    <img src="../../public/img/experience.jpg" alt="Placeholder Image"
+                        class="w-[500px] h-[200px] opacity-50" />
+                </div>
+            </div>
+
+            <div class="flex-1 flex justify-center">
+                <div class="bg-white rounded-lg p-10 shadow-2xl w-full max-w-[500px]">
+                    <h2 class="text-2xl font-bold text-center text-[#333] mb-2">Crear Cuenta</h2>
+                    <p class="text-sm text-center text-gray-600 mb-8">Únete a nuestra familia culinaria italiana</p>
+                    <form method="POST" action="../../Registrar.php" class="space-y-5">
+                        <h3 class="text-base font-bold mb-6 text-[#333]">Información Personal</h3>
+
+                        <div class="flex flex-col md:flex-row gap-6 mb-6">
+                            <div class="flex-1">
+                                <label for="nombre" class="block text-sm font-bold mb-2 text-[#333]">Nombre *</label>
+                                <div class="relative">
+                                    <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required
+                                        class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <label for="apellido" class="block text-sm font-bold mb-2 text-[#333]">Apellido
+                                    *</label>
+                                <div class="relative">
+                                    <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required
+                                        class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-bold mb-2 text-[#333]">Email *</label>
+                            <div class="relative">
+                                <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                                <input type="email" name="email" id="email" placeholder="tu@email.com" required
+                                    class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="password" class="block text-sm font-bold mb-2 text-[#333]">Contraseña *</label>
+                            <div class="relative">
+                                <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                                <input type="password" name="password" id="password" placeholder="Mínimo 8 caracteres"
+                                    required
+                                    class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">La contraseña debe tener al menos 8 caracteres,
+                                incluir mayúsculas,
+                                minúsculas y números.</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="confirm-password" class="block text-sm font-bold mb-2 text-[#333]">Confirmar
+                                Contraseña *</label>
+                            <div class="relative">
+                                <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                                <input type="password" id="confirm-password" name="confirm_password"
+                                    placeholder="Confirma tu contraseña" required
+                                    class="pl-10 pr-4 py-2 w-full border border-[#ccc] rounded-md focus:outline-none focus:border-[#7b68ee] focus:ring-2 focus:ring-[#7b68ee]/20" />
+                            </div>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-[#967ed5] text-white py-2 rounded-md hover:bg-opacity-90 transition-colors font-semibold">Crear
+                            Mi Cuenta</button>
+
+                        <p class="text-center text-sm text-gray-600 mt-6">¿Ya tienes una cuenta? <a href="login.php"
+                                class="text-[#E9C89A] hover:underline">Inicia sesión aquí</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="bg-[#f8f5f0] py-16 px-6 text-center max-w-[1200px] mx-auto">
+        <h2 class="text-4xl font-bold mb-4 text-[#333]">Bienvenido a la <span class="text-[#967ed5]">Familia La
+                Capuzzella</span></h2>
+        <p class="text-lg text-[#333] max-w-2xl mx-auto leading-relaxed">
+            Al registrarte, no solo obtienes acceso a nuestros servicios, sino que te conviertes en parte de una
+            tradición
+            culinaria italiana que ha perdurado por generaciones.
+        </p>
+    </section>
+
+    <section class="bg-[#f8f5f0] py-16 px-6 text-center max-w-[1200px] mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-[#333]">Lo Que Dicen Nuestros <span
+                class="text-[#967ed5]">Clientes</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-left flex flex-col justify-between">
+                <div class="text-[#ffd700] mb-3"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i
+                        class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i>
+                </div>
+                <p class="text-base text-[#333] flex-grow mb-4">
+                    "Ser miembro de La Capuzzella ha transformado mi experiencia culinaria. Los descuentos y eventos
+                    exclusivos son increíbles."
+                </p>
+                <div class="flex items-center gap-4 mt-4">
+                    <div
+                        class="w-11 h-11 bg-[#6a7b8c] text-white font-bold text-center rounded-full flex items-center justify-center">
+                        MG</div>
+                    <div>
+                        <p class="font-bold text-[#333]">María González</p>
+                        <p class="text-sm text-gray-600">Miembro VIP</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 text-left flex flex-col justify-between">
+                <div class="text-[#ffd700] mb-3"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i
+                        class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i>
+                </div>
+                <p class="text-base text-[#333] flex-grow mb-4">
+                    "El programa de puntos me ha permitido disfrutar de cenas gratuitas. La atención personalizada es
+                    excepcional."
+                </p>
+                <div class="flex items-center gap-4 mt-4">
+                    <div
+                        class="w-11 h-11 bg-[#6a7b8c] text-white font-bold text-center rounded-full flex items-center justify-center">
+                        CR</div>
+                    <div>
+                        <p class="font-bold text-[#333]">Carlos Ruiz</p>
+                        <p class="text-sm text-gray-600">Miembro desde 2020</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 text-left flex flex-col justify-between">
+                <div class="text-[#ffd700] mb-3"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i
+                        class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i>
+                </div>
+                <p class="text-base text-[#333] flex-grow mb-4">
+                    "Las invitaciones a las cenas temáticas son lo mejor. He aprendido tanto sobre la cultura italiana
+                    gastronómica."
+                </p>
+                <div class="flex items-center gap-4 mt-4">
+                    <div
+                        class="w-11 h-11 bg-[#6a7b8c] text-white font-bold text-center rounded-full flex items-center justify-center">
+                        AM</div>
+                    <div>
+                        <p class="font-bold text-[#333]">Ana Martin</p>
+                        <p class="text-sm text-gray-600">Miembro Premium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#4E5D83] text-[#e0e0e0] py-16 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6 leading-snug">¡Se parte de nuestra familia!<br><span
+                class="text-[#E9C89A]">La Capuzzella</span></h2>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modalCodigo" class="modal">
+        <div class="modal-content">
+            <h3>Verificación de cuenta</h3>
+            <p>Ingresa el código que enviamos a tu correo:</p>
+            <input type="text" id="codigo" maxlength="6"><br><br>
+            <button onclick="verificarCodigo()">Validar</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('formRegistro').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            fetch('registrar.php', {
+                method: 'POST',
+                body: new FormData(this)
+            })
+                .then(res => res.text())
+                .then(data => {
+                    if (data === "OK") {
+                        document.getElementById('modalCodigo').style.display = 'flex';
+                    } else {
+                        alert(data);
+                    }
+                });
+        });
+
+        function verificarCodigo() {
+            let codigo = document.getElementById('codigo').value;
+
+            fetch('verificar_codigo.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'codigo=' + encodeURIComponent(codigo)
+            })
+                .then(res => res.text())
+                .then(resp => {
+                    alert(resp);
+                    if (resp.includes("correcto")) {
+                        location.href = 'login.php';
+                    }
+                });
+        }
+    </script>
+
+</body>
+
+</html>
